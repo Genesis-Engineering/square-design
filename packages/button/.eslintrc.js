@@ -18,7 +18,7 @@ module.exports = {
         ecmaVersion: 2020,
         sourceType: 'module',
     },
-    plugins: ['react', 'jsx-a11y'],
+    plugins: ['react', 'jsx-a11y', 'simple-import-sort'],
     rules: {
         'react-hooks/exhaustive-deps': 'error',
         'no-var': 'error',
@@ -27,6 +27,8 @@ module.exports = {
         radix: 'error',
         'space-before-blocks': 'error',
         'import/prefer-default-export': 'off',
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
     },
     overrides: [
         {

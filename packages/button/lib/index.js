@@ -1,6 +1,7 @@
-import React from 'react';
-import { StyledComponent, GlobalButtonStyle } from './styles';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import { GlobalButtonStyle, StyledComponent } from './styles';
 
 const Component = ({ variant = 'primary', disabled, onClick, children, ...restProps }) => {
     const handleClick = (e) => {

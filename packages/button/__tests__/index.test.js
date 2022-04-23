@@ -1,7 +1,9 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import Button from '../lib';
 import '@testing-library/jest-dom';
+
+import { render } from '@testing-library/react';
+import React from 'react';
+
+import Button from '../lib';
 
 describe('Button Component', function () {
     let buttonContainer;
