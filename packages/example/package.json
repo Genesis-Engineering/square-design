@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@genesis/button": "file:.yalc/@genesis/button",
+    "@genesis/button": "0.0.1",
     "next": "12.1.5",
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0"
