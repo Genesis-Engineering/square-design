@@ -42,7 +42,7 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^27.5.1",
-    "microbundle": "^0.11.0",
+    "microbundle": "^0.12.0",
     "prettier": "^2.6.2"
   },
   "dependencies": {
