@@ -13,8 +13,8 @@ const Component = ({ variant = 'primary', disabled, onClick, children, ...restPr
             <GlobalButtonStyle />
             <StyledComponent
                 {...restProps}
-                className={`sd-button sd-button__${variant} ${
-                    disabled ? 'sd-button__disabled' : ''
+                className={`ge-button ge-button__${variant} ${
+                    disabled ? 'ge-button__disabled' : ''
                 } ${restProps.className ?? ''}`}
                 onClick={handleClick}
             >
