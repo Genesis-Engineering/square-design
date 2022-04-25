@@ -27,7 +27,7 @@ const Component = ({ variant = 'primary', disabled, onClick, children, ...restPr
 
 Component.propTypes = {
     children: PropTypes.node,
-    variant: PropTypes.oneOf('primary', 'secondary', 'subtle', 'text'),
+    variant: PropTypes.oneOf(['primary', 'secondary', 'subtle', 'text']),
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
 };

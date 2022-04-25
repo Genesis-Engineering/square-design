@@ -115,7 +115,7 @@ export const StyledComponent = styled.button`
 
         font-family: 'Epilogue';
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 16px;
 
         border-style: solid;
@@ -125,7 +125,7 @@ export const StyledComponent = styled.button`
         &:hover,
         &:focus,
         &:focus-within,
-        &:focus-within {
+        &:focus-visible {
             outline: var(--ge-line) solid calc(var(--ge-size) / 2);
         }
 
