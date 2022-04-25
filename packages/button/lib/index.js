@@ -3,7 +3,7 @@ import React from 'react';
 
 import { GlobalButtonStyle, StyledComponent } from './styles';
 
-const Component = ({ variant = 'primary', disabled, onClick, children, ...restProps }) => {
+const Component = ({ variant = 'primary', disabled = false, onClick, children, ...restProps }) => {
     const handleClick = (e) => {
         if (!disabled) {
             onClick(e);
