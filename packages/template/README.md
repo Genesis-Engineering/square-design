@@ -1,8 +1,8 @@
-# Button
+# Template Component
 
 ### Example
 
-http://localhost:6006/?path=/docs/button--disabled
+http://localhost:6006/?path=/docs/template--disabled
 
 ### Code Convention
 
