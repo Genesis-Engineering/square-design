@@ -4,6 +4,10 @@ Square Design System for all Genesis Engineering Ecosystem
 
 ## Installation
 
-```bash
+```
+npm install @ge/square-design
+```
+or
+```
 yarn add @ge/square-design
 ```
