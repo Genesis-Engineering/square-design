@@ -1,6 +1,6 @@
 # square-design
 
-Square Design System for all Genesys Engineering Ecosystem
+Square Design System for all Genesis Engineering Ecosystem
 
 ## Installation
 
