@@ -2,6 +2,8 @@
 
 Square Design System for all Genesis Engineering Ecosystem
 
+Base design in [Figma](https://figma.com)
+
 ## Installation
 
 ```
