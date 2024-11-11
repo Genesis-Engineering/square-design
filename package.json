@@ -1,7 +1,5 @@
 {
-  "name": "root",
+  "name": "square-design",
   "private": true,
-  "devDependencies": {
-    "lerna": "^4.0.0"
-  }
+  "devDependencies": {}
 }
