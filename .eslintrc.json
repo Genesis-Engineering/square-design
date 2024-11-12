@@ -12,6 +12,62 @@
         "sourceType": "module",
         "project":"./tsconfig.json"
     },
-    "plugins" :["react","@typescript-eslint","prettier"]
-    // other configuration options...
+    "plugins" :[
+        "react","@typescript-eslint","prettier"
+    ],
+    "rules": {
+        "max-len": ["error", { "code": 80}], 
+        "import/no-extraneous-dependencies": [
+            "error", 
+            {
+                "devDependencies": false, 
+                "optionalDependencies": false, 
+                "peerDependencies": false
+            }
+        ],
+        "import/order": [
+            1, 
+            { 
+                "groups": [
+                    "external", 
+                    "builtin", 
+                    "internal", 
+                    "sibling", 
+                    "parent", 
+                    "index"
+                ], 
+                "pathGroups": [
+                    { 
+                        "pattern": "components", 
+                        "group": "internal" 
+                    }, 
+                    { 
+                        "pattern": "common", 
+                        "group": "internal" 
+                    }, 
+                    { 
+                        "pattern": "routes/**", 
+                        "group": "internal" 
+                    }, 
+                    { 
+                        "pattern": "assets/**", 
+                        "group": "internal", 
+                        "position": "after" 
+                    }
+                ], 
+                "pathGroupsExcludedImportTypes": ["internal"], 
+                "alphabetize": { 
+                    "order": "asc", 
+                    "caseInsensitive": true 
+                }
+            } 
+        ],
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "variableLike", 
+                "format": ["snake_case", "PascalCase", "camelCase"]
+            }
+        ]
+    }
 }
