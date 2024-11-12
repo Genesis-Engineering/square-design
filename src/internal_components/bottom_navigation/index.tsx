@@ -1,50 +1,8 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
 import i_menu from '@interface/menu'
-import React, { useState } from 'react'
+import BottomNavigationList from '@internal_components/bottom_navigation_list'
+import React from 'react'
+
 import { all_menu } from '../../menu'
-
-function MenuNavigation({ child }: { child: i_menu }) {
-  const [open, setOpen] = useState<boolean>(false)
-  return (
-    <li>
-      <button
-        type="button"
-        className="
-          outline-none w-full p-4 flex justify-between items-center 
-          text-white uppercase text-xs text-left
-          hover:bg-slate-300 hover:text-slate-600 
-          focus:bg-slate-300 focus:text-slate-600"
-        onClick={() => (child.children ? setOpen(!open) : null)}
-      >
-        <span>{child.label}</span>
-        {child.children && <span className="text-lg">{open ? '-' : '+'}</span>}
-      </button>
-      {open && <BottomMenuNavigation children_menu={child.children} />}
-    </li>
-  )
-}
-
-function BottomMenuNavigation({
-  children_menu,
-  className,
-}: {
-  children_menu?: Array<i_menu>
-  className?: string
-}) {
-  if (!children_menu) return null
-  return (
-    <ul className={`pl-4 ${className}`}>
-      {children_menu?.map((child) => {
-        return <MenuNavigation child={child} />
-      })}
-    </ul>
-  )
-}
-
-BottomMenuNavigation.defaultProps = {
-  children_menu: [],
-  className: '',
-}
 
 export default function BottomNavigation() {
   return (
@@ -95,7 +53,7 @@ export default function BottomNavigation() {
                   group-focus-within:max-h-[60vh]
                   "
                 >
-                  <BottomMenuNavigation
+                  <BottomNavigationList
                     children_menu={menu.children}
                     className="-ml-4"
                   />

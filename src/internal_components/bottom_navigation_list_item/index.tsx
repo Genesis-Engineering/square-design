@@ -1,0 +1,24 @@
+import i_menu from '@interface/menu'
+import BottomNavigationList from '@internal_components/bottom_navigation_list'
+import React, { useState } from 'react'
+
+export default function BottomNavigationListItem({ child }: { child: i_menu }) {
+  const [open, setOpen] = useState<boolean>(false)
+  return (
+    <li>
+      <button
+        type="button"
+        className="
+            outline-none w-full p-4 flex justify-between items-center 
+            text-white uppercase text-xs text-left
+            hover:bg-slate-300 hover:text-slate-600 
+            focus:bg-slate-300 focus:text-slate-600"
+        onClick={() => (child.children ? setOpen(!open) : null)}
+      >
+        <span>{child.label}</span>
+        {child.children && <span className="text-lg">{open ? '-' : '+'}</span>}
+      </button>
+      {open && <BottomNavigationList children_menu={child.children} />}
+    </li>
+  )
+}
