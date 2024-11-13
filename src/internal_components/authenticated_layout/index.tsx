@@ -3,9 +3,14 @@ import TopNavigation from '@internal_components/top_navigation'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-export default function AppPage() {
+export default function AuthenticatedLayout() {
   return (
-    <div className="flex flex-col justify-between h-dvh px-8 gap-8">
+    <div
+      className="
+        flex flex-col justify-between gap-8 
+        h-dvh px-8 
+        bg-white dark:bg-zinc-900"
+    >
       <TopNavigation />
       <div className="flex flex-1 overflow-x-hidden overflow-y-auto">
         <Outlet />

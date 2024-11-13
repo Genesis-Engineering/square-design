@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-dark:before {
+  content: "\e906";
+}
+.icon-light:before {
+  content: "\e904";
+}
+.icon-notifications:before {
+  content: "\e905";
+}
 .icon-miscellaneous:before {
   content: "\e900";
 }

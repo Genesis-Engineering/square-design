@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 /* eslint-disable max-len */
 import i_menu from '@interface/menu'
 import BottomNavigationListItem from '@internal_components/bottom_navigation_list_item'
@@ -14,15 +15,10 @@ function BottomNavigationList({
   return (
     <ul className={`pl-4 ${className}`}>
       {children_menu?.map((child) => {
-        return <BottomNavigationListItem child={child} />
+        return <BottomNavigationListItem key={child.label} child={child} />
       })}
     </ul>
   )
-}
-
-BottomNavigationList.defaultProps = {
-  children_menu: [],
-  className: '',
 }
 
 export default BottomNavigationList

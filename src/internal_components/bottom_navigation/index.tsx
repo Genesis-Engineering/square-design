@@ -6,27 +6,34 @@ import { all_menu } from '../../menu'
 
 export default function BottomNavigation() {
   return (
-    <div className="flex">
-      <div className="bg-black gap-8 flex">
+    <div className="flex bg-black md:bg-transparent">
+      <div
+        className="
+        md:bg-black 
+        flex flex-col-reverse md:flex-row md:gap-8 
+        w-full md:w-auto"
+      >
         <span
           className="
-          px-8 py-4 font-bold text-white text-3xl uppercase leading-none
+            px-8 py-4 
+            font-bold text-white text-3xl uppercase leading-none
+            text-center
           "
         >
           squ[ ]re
         </span>
-        <div className="flex pr-4">
+        <div className="flex md:pr-4 justify-center">
           {all_menu.map((menu: i_menu) => {
             return (
-              <div className="relative group">
+              <div className="relative group" key={menu.label}>
                 <button
                   type="button"
                   className="
                     w-auto h-[64px] outline-none cursor-pointer 
                     inline-block px-4 align-middle
                     transition-all duration-500
-                    group-hover:bg-slate-600 
-                    group-focus-within:bg-slate-600
+                    group-hover:bg-zinc-600 
+                    group-focus-within:bg-zinc-600
                   "
                 >
                   <span
@@ -37,7 +44,7 @@ export default function BottomNavigation() {
                     className="
                     transition-all duration-500
                     max-w-[0px] inline-block overflow-hidden whitespace-nowrap
-                    text-white font-medium uppercase align-middle
+                    text-white font-medium text-xs uppercase align-middle
                     group-hover:max-w-[100vw] group-hover:ml-4
                     group-focus-within:max-w-[100vw] group-focus-within:ml-4"
                   >
@@ -46,7 +53,7 @@ export default function BottomNavigation() {
                 </button>
                 <div
                   className="
-                  absolute left-0 bottom-[64px] bg-slate-600 
+                  absolute left-0 bottom-[64px] bg-zinc-600 
                   max-h-0 inline-block overflow-y-auto w-full
                   transition-all duration-500
                   group-hover:max-h-[60vh] 
