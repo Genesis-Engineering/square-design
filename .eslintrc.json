@@ -1,0 +1,75 @@
+{ 
+    "extends": [
+        "react-app",
+        "react-app/jest",
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project":"./tsconfig.json"
+    },
+    "plugins" :[
+        "react","@typescript-eslint","prettier"
+    ],
+    "rules": {
+        "max-len": ["error", { "code": 80}], 
+        "import/no-extraneous-dependencies": [
+            "error", 
+            {
+                "devDependencies": true, 
+                "optionalDependencies": true, 
+                "peerDependencies": true
+            }
+        ],
+        "import/order": [
+            1, 
+            { 
+                "groups": [
+                    "external", 
+                    "builtin", 
+                    "internal", 
+                    "sibling", 
+                    "parent", 
+                    "index"
+                ], 
+                "pathGroups": [
+                    { 
+                        "pattern": "components", 
+                        "group": "internal" 
+                    }, 
+                    { 
+                        "pattern": "common", 
+                        "group": "internal" 
+                    }, 
+                    { 
+                        "pattern": "routes/**", 
+                        "group": "internal" 
+                    }, 
+                    { 
+                        "pattern": "assets/**", 
+                        "group": "internal", 
+                        "position": "after" 
+                    }
+                ], 
+                "pathGroupsExcludedImportTypes": ["internal"], 
+                "alphabetize": { 
+                    "order": "asc", 
+                    "caseInsensitive": true 
+                }
+            } 
+        ],
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "variableLike", 
+                "format": ["snake_case", "PascalCase", "camelCase"]
+            }
+        ],
+        "react/jsx-props-no-spreading": 0,
+        "react/prop-types": 0
+    }
+}
