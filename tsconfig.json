@@ -23,7 +23,6 @@
     "paths": {
       "@components/*": ["./components/*"],
       "@contexts/*": ["./contexts/*"],
-      "@interface/*": ["./interface/*"],
       "@internal_components/*": ["./internal_components/*"],
       "@fonts/*": ["./fonts/*"],
       "@pages/*": ["./pages/*"],

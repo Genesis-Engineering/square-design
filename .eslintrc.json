@@ -20,9 +20,9 @@
         "import/no-extraneous-dependencies": [
             "error", 
             {
-                "devDependencies": false, 
-                "optionalDependencies": false, 
-                "peerDependencies": false
+                "devDependencies": true, 
+                "optionalDependencies": true, 
+                "peerDependencies": true
             }
         ],
         "import/order": [
@@ -68,6 +68,8 @@
                 "selector": "variableLike", 
                 "format": ["snake_case", "PascalCase", "camelCase"]
             }
-        ]
+        ],
+        "react/jsx-props-no-spreading": 0,
+        "react/prop-types": 0
     }
 }

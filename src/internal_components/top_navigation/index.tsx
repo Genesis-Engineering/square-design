@@ -1,7 +1,8 @@
-import i_route_hande from '@interface/route_handle'
 import React from 'react'
 import { useMatches } from 'react-router-dom'
+import NotificationButton from './notification_button'
 import ThemeButton from './theme_button'
+import i_route_hande from '../../i_route_handle'
 
 export default function TopNavigation() {
   const matches = useMatches()
@@ -11,7 +12,7 @@ export default function TopNavigation() {
   return (
     <nav
       className="
-      py-4 border-b border-b-black 
+      py-4 border-b-2 border-b-black 
       gap-8 flex flex-col justify-between md:flex-row
       dark:border-b-zinc-300"
     >
@@ -24,6 +25,7 @@ export default function TopNavigation() {
 
       <div className="flex justify-center gap-4">
         <ThemeButton />
+        <NotificationButton />
       </div>
     </nav>
   )

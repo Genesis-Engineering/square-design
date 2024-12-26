@@ -1,8 +1,8 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable max-len */
-import i_menu from '@interface/menu'
 import BottomNavigationListItem from '@internal_components/bottom_navigation_list_item'
 import React from 'react'
+import i_menu from '../../i_menu'
 
 function BottomNavigationList({
   children_menu,

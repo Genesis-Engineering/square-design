@@ -1,4 +1,4 @@
-import i_menu from '@interface/menu'
+import i_menu from './i_menu'
 
 export const dashboard_menu: i_menu = {
   label: 'Dashboard',

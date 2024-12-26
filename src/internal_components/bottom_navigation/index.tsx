@@ -1,6 +1,6 @@
-import i_menu from '@interface/menu'
 import BottomNavigationList from '@internal_components/bottom_navigation_list'
 import React from 'react'
+import i_menu from '../../i_menu'
 
 import { all_menu } from '../../menu'
 

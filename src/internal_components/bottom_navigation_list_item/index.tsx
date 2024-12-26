@@ -1,6 +1,6 @@
-import i_menu from '@interface/menu'
 import BottomNavigationList from '@internal_components/bottom_navigation_list'
 import React, { useState } from 'react'
+import i_menu from '../../i_menu'
 
 export default function BottomNavigationListItem({ child }: { child: i_menu }) {
   const [open, setOpen] = useState<boolean>(false)

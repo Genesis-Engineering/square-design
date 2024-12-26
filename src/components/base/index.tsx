@@ -1,6 +1,9 @@
 import React from 'react'
 
-export default function Base({ children }: React.HTMLAttributes<HTMLElement>) {
+export default function Base({
+  children,
+  className,
+}: React.HTMLAttributes<HTMLElement>) {
   return (
     <div className="relative inline-block group">
       <div
@@ -11,18 +14,18 @@ export default function Base({ children }: React.HTMLAttributes<HTMLElement>) {
             group-focus:left-0 group-focus:top-0 group-focus:bg-black
             group-focus-within:left-0 group-focus-within:top-0 
             group-focus-within:bg-black
-            dark:bg-black dark:group-hover:bg-zinc-300 
+            dark:bg-zinc-600 dark:group-hover:bg-zinc-300 
             dark:group-focus:bg-zinc-300 dark:group-focus-within:bg-zinc-300
             "
       />
       <div
-        className="
+        className={`
             relative 
             left-0 top-0 w-full h-full 
             border border-2 border-solid border-black
             py-1 px-4
             dark:border-zinc-300
-        "
+            ${className}`}
       >
         <div
           className="
